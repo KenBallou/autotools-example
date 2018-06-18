@@ -1,1 +1,1 @@
-extern void greet (void);
+extern void greet (const char * name);

@@ -1,6 +1,13 @@
 #include <stdio.h>
 
-void greet ()
+void greet (const char * name)
 {
-    puts ("Hello, world!");
+    if (name != NULL)
+    {
+        printf ("Hello, %s\n", name);
+    }
+    else
+    {
+        puts ("Hello, world!");
+    }
 }
