@@ -1,1 +1,1 @@
-man_MANS = hello.1
+man_MANS = greet.1
