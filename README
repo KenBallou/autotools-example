@@ -1,0 +1,7 @@
+This is an utterly simple-minded sample that demonstrates how to use
+autotools (autoconf, automake, and libtool).
+
+This project builds two binaries, greet and greet_static.  Both binaries
+rely on libhello for the greet() function.  The greet binary links against
+a shared library version of libhello, while greet_static links against a static
+version of libhello.
