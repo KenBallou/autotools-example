@@ -1,1 +1,1 @@
-man_MANS = greet.1
+dist_man_MANS = greet.1
