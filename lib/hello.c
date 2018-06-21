@@ -1,3 +1,4 @@
+#include "hello.h"
 #include <stdio.h>
 
 void greet (const char * name)
