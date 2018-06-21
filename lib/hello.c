@@ -1,13 +1,17 @@
+#include "config.h"
+#include "hello.h"
+#include "gettext.h"
 #include <stdio.h>
+#define _(s) gettext(s)
 
 void greet (const char * name)
 {
     if (name != NULL)
     {
-        printf ("Hello, %s\n", name);
+        printf (_("Hello, %s\n"), name);
     }
     else
     {
-        puts ("Hello, world!");
+        puts (_("Hello, world!"));
     }
 }
