@@ -12,6 +12,15 @@ AM_INIT_AUTOMAKE([foreign])
 
 LT_INIT
 
+AC_ARG_ENABLE([separate-hello-library],
+              [AS_HELP_STRING([--enable-separate-hello-library],
+                              [build a separate shared libhello.so library])],
+              [],
+              [enable_separate_hello_library=no])
+
+AM_CONDITIONAL([BUILD_SEPARATE_HELLO_LIBRARY],
+               [test "x$enable_separate_hello_library" = "xyes"])
+
 AC_SUBST([LIBTOOL_DEPS])
 
 AC_OUTPUT([Makefile include/Makefile lib/Makefile src/Makefile man/Makefile])
