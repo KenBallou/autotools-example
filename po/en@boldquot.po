@@ -31,8 +31,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hello 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-20 18:12-0400\n"
-"PO-Revision-Date: 2018-06-20 18:12-0400\n"
+"POT-Creation-Date: 2018-06-20 23:24-0400\n"
+"PO-Revision-Date: 2018-06-20 23:24-0400\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: en@boldquot\n"
@@ -41,11 +41,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: lib/hello.c:10
+#: lib/hello.c:11
 #, c-format
 msgid "Hello, %s\n"
 msgstr "Hello, %s\n"
 
-#: lib/hello.c:14
+#: lib/hello.c:15
 msgid "Hello, world!"
 msgstr "Hello, world!"
