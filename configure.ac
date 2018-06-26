@@ -109,5 +109,4 @@ AM_CONDITIONAL([BUILD_SEPARATE_HELLO_LIBRARY],
 ### create.  Since we did not specify input files, each Makefile is generated
 ### from the corresponding Makefile.in (which itself was generated from
 ### Makefile.am by Automake).
-AC_OUTPUT([Makefile include/Makefile lib/Makefile src/Makefile man/Makefile])
-
+AC_OUTPUT([Makefile include/Makefile lib/Makefile src/Makefile man/Makefile po/Makefile.in])
