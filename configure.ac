@@ -1,4 +1,4 @@
-### Except for AC_OREREQ, this needs to be the first macro in this file.
+### Except for AC_PREREQ, this needs to be the first macro in this file.
 ### This one macro creates a LOT of code in the configure script.  On
 ### a Debian 9 system, a configure.ac file with just this one macro
 ### causes Autoconf to create a configure script with 1,673 lines.
@@ -77,7 +77,7 @@ if test \( -f /usr/local/lib/libiconv.a \) -a \
     with_libiconv_prefix=/usr/local
 fi
 if test \( -f /usr/local/lib/libintl.a \) -a \
-        \( -z "${with_libintl_prefix" \) ; then
+        \( -z "${with_libintl_prefix}" \) ; then
     with_libintl_prefix=/usr/local
 fi
 AM_GNU_GETTEXT(external)
