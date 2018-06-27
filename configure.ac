@@ -56,6 +56,30 @@ AM_INIT_AUTOMAKE([foreign])
 ### that we are not providing the gettext source in this distribution.
 ### Instead, we are relying on an installed gettext package whose version
 ### is at least 0.19,8.
+###
+### OpenBSD note:  Installing GNU gettext installs files in the /usr/local
+### hierarchy.  The configure script will not find packages installed in
+### /usr/local without help.  The user can run configure with the options
+###  "--with-libintl-prefix=/usr/local --with-iconv-prefix=/usr/local" to tell
+### configure where the packages are installed.  However, it's ugly to make
+### the user have to do this.  Let's give configure a little help:  if we
+### find the libraries in /usr/local/lib and the user has not already
+### specified values for the prefixes, we'll set them here.
+###
+### It is really important to remember that configure.ac is really just
+### a very heavily macroized shell script.  It is entirely possible to
+### insert shell script in configure.ac.  However, be careful to write
+### portable shell script, as the whole point of Autotools is to deal
+### with portability issues across systems.  (For example, the Autotools
+### always use "test" instead of "[" because of portability issues.)
+if test \( -f /usr/local/lib/libiconv.a \) -a \
+        \( -z "${with_libiconv_prefix}" \) ; then
+    with_libiconv_prefix=/usr/local
+fi
+if test \( -f /usr/local/lib/libintl.a \) -a \
+        \( -z "${with_libintl_prefix" \) ; then
+    with_libintl_prefix=/usr/local
+fi
 AM_GNU_GETTEXT(external)
 AM_GNU_GETTEXT_VERSION(0.19.8)
 
