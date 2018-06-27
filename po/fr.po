@@ -15,11 +15,11 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: lib/hello.c:16
+#: lib/hello.c:21
 #, c-format
 msgid "Hello, %s\n"
 msgstr "Bonjour, %s\n"
 
-#: lib/hello.c:20
+#: lib/hello.c:25
 msgid "Hello, world!"
 msgstr "Bonjour, le monde"

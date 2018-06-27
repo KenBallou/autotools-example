@@ -2,7 +2,7 @@
 ### This one macro creates a LOT of code in the configure script.  On
 ### a Debian 9 system, a configure.ac file with just this one macro
 ### causes Autoconf to create a configure script with 1,673 lines.
-AC_INIT([hello], [1.0])
+AC_INIT([greet], [1.0])
 
 ### Instead of cluttering up the top level directory, this macro causes
 ### Autoconf to create a build-aux/ directory for any scripts Autotools
