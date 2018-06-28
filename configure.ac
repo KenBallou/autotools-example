@@ -28,12 +28,11 @@ AC_CONFIG_HEADERS([config.h])
 ###
 ### It is possible to specify a list of compilers to try before Autoconf's
 ### default list.  For example, if the developer has a preference for, say,
-### clang, then write: AC_PROG_CC_C99([clang])
-### This will use clang if it is installed (and findable by Autoconf) and
-### look for another compiler if clang is not installed.  Similarly, if we
-### had another hypothetical compiler "ccomp", we could write
-### AC_PROG_CC_C99([clang ccomp]) to check first for clang, then ccomp, and
-### then for Autoconf's default.
+### clang, then write: AC_PROG_CC_([clang]).  This will use clang if it is
+### installed (and findable by Autoconf) and look for another compiler if
+### clang is not installed.  Similarly, if we had another hypothetical
+### compiler "ccomp", we could write AC_PROG_CC([clang ccomp]) to check
+### first for clang, then ccomp, and then for Autoconf's default.
 ###
 ### (Note: GNU gcc automatically accepts C99 code by default.  The need for
 ### this macro was not apparent until we tried to compile this code on an
@@ -42,6 +41,7 @@ AC_CONFIG_HEADERS([config.h])
 ### on a non-Linux system (or, preferably, as many non-Linux systems as
 ### reasonably possible).  Fortunately, virtual machines make this a much
 ### more feasible task.
+AC_PROG_CC
 AC_PROG_CC_C99
 
 ### This and the next macro are the minimum that needs to be done to use
