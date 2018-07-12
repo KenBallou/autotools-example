@@ -6,7 +6,7 @@
 #include <locale.h>
 #endif
 
-void main (int argc, char * argv [])
+int main (int argc, char * argv [])
 {
 #if ENABLE_NLS && HAVE_GETTEXT
     setlocale (LC_ALL, "");
@@ -26,5 +26,5 @@ void main (int argc, char * argv [])
         greet (NULL);
     }
     
-    exit (EXIT_SUCCESS);
+    return EXIT_SUCCESS;
 }
