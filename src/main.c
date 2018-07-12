@@ -2,6 +2,9 @@
 #include "gettext.h"
 #include "hello.h"
 #include <stdlib.h>
+#if ENABLE_NLS && HAVE_GETTEXT
+#include <locale.h>
+#endif
 
 void main (int argc, char * argv [])
 {
